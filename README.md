@@ -2,7 +2,7 @@
 
 ```bash
 mkdir ./certs
-chcon -t svirt_sandbox_file_t ./certs
+chcon -t svirt_sandbox_file_t ./certs # if your system uses SELinux
 chgrp -R docker ./certs
 docker run --rm -v $(pwd)/certs:/certs ehazlett/certm -d /certs bundle generate -o=local --host localhost --host 127.0.0.1 --host host.domain.tld
 mv server-key.pem  host.domain.tld.key
