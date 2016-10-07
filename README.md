@@ -1,3 +1,5 @@
+an [nginx-proxy] environment
+
 # Create self signed certs
 
 ```bash
@@ -42,3 +44,5 @@ docker-compose down
 docker-compose down -v
 docker network rm nginx-proxy
 ```
+
+[nginx-proxy]: https://github.com/jwilder/nginx-proxy
