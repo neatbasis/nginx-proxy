@@ -1,5 +1,9 @@
 an [nginx-proxy] environment
 
+# Ensure a container can access docker's socket on a SELinux enabled system
+
+See https://github.com/dpw/selinux-dockersock
+
 # Create self signed certs
 
 ```bash
