@@ -1,0 +1,12 @@
+[Unit]
+Description=Nginx docker proxy
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/local/bin/docker-compose -f /srv/docker/nginx-proxy/docker-compose.yml up
+ExecStop=/usr/local/bin/docker-compose -f /srv/docker/nginx-proxy/docker-compose.yml stop
+
+[Install]
+WantedBy=local.target
